@@ -11,7 +11,7 @@ import java.util.Date;
 
 @Entity
 @Data
-@NoArgsConstructor
+// @NoArgsConstructor
 @AllArgsConstructor
 public class Product {
     @Id
@@ -30,8 +30,11 @@ public class Product {
     @Lob
     private byte[] productImage;
 
-    public Product(int id){
+    public Product(int id) {
         this.id = id;
+    }
+
+    public Product() {
     }
 
     public int getId() {
@@ -129,6 +132,5 @@ public class Product {
     public void setProductImage(byte[] productImage) {
         this.productImage = productImage;
     }
-    
 
 }
